@@ -1,0 +1,178 @@
+/* ====================================
+   1. Global Styles & Animated Universe Background
+   ==================================== */
+:root {
+    /* थीम कलर वेरिएबल्स (आपके इमेज से प्रेरित) */
+    --primary-color: #00eaff;    /* ग्लोइंग नीला/फिरोजी */
+    --secondary-color: #ffcc00;  /* ग्लोइंग पीला */
+    --text-color-light: #e0e0ff; /* हल्का टेक्स्ट */
+    --bg-dark: #08081a;          /* बहुत गहरा नीला/काला */
+    --glass-bg: rgba(255, 255, 255, 0.08); /* हल्का ग्लास बैकग्राउंड */
+    --glass-border: rgba(0, 255, 255, 0.3); /* ग्लोइंग बॉर्डर */
+    --glass-blur: 8px;           /* धुंधलापन */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color-light);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated Universe Background (CSS Only) */
+body::before {
+    content: '';
+    position: fixed; /* फिक्स करें ताकि स्क्रॉल करने पर भी दिखे */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    /* मुख्य गैलेक्सी/स्पाइरल इफ़ेक्ट (इमेज से प्रेरित ग्रेडिएंट्स) */
+    background: 
+        /* केंद्रीय पीली चमक */
+        radial-gradient(circle at 50% 50%, var(--secondary-color) 0%, rgba(0,0,0,0) 10%),
+        /* नीली चमक */
+        radial-gradient(circle at 50% 50%, var(--primary-color) 0%, rgba(0,0,0,0) 20%),
+        /* ग्लोइंग रिंग 1 */
+        radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 30%, var(--primary-color) 32%, rgba(0,0,0,0) 35%),
+        /* ग्लोइंग रिंग 2 */
+        radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 45%, var(--secondary-color) 47%, rgba(0,0,0,0) 50%),
+        /* ग्लोइंग रिंग 3 */
+        radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, var(--primary-color) 57%, rgba(0,0,0,0) 60%);
+    
+    background-size: 
+        300px 300px, 
+        500px 500px, 
+        800px 800px, 
+        1000px 1000px, 
+        1200px 1200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: galaxyRotate 60s linear infinite;
+    transform-origin: center center;
+}
+
+/* छोटे तारे */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: 
+        radial-gradient(circle at 0% 0%, #fff 0.5px, transparent 0.5px),
+        radial-gradient(circle at 25% 75%, #e0e0ff 0.5px, transparent 0.5px);
+    background-size: 50px 50px;
+    animation: starsTwinkle 15s linear infinite alternate, starsMove 200s linear infinite;
+}
+
+
+/* Animations */
+@keyframes galaxyRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes starsMove {
+    from { background-position: 0 0; }
+    to { background-position: 10000px 10000px; }
+}
+
+@keyframes starsTwinkle {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.8; }
+}
+
+/* ====================================
+   2. Global Button & Input Styling
+   ==================================== */
+.btn {
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.btn.primary-btn {
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    border: none;
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.btn.primary-btn:hover {
+    box-shadow: 0 0 30px var(--primary-color), 0 0 5px var(--secondary-color);
+    transform: translateY(-3px) scale(1.02);
+}
+
+.btn.secondary-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.btn.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    box-shadow: 0 0 30px var(--primary-color), 0 0 5px var(--secondary-color);
+    transform: translateY(-3px) scale(1.02);
+}
+
+
+/* Global Glass Effect (इन्हें अन्य कंपोनेंट्स में उपयोग किया जाएगा) */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: 15px; 
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--text-color-light);
+    font-size: 1em;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--secondary-color);
+}

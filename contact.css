@@ -1,0 +1,32 @@
+/* कॉन्टैक्ट फॉर्म स्टाइलिंग */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #00ffff;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #e0e0ff;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 25px;
+}

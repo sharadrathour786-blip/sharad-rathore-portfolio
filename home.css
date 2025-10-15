@@ -1,0 +1,287 @@
+/* ====================================
+   1. Navbar Styling (Navigation)
+   ==================================== */
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 50px;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box; 
+    
+    /* Navbar पर ग्लास इफ़ेक्ट */
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.logo {
+    color: var(--primary-color); 
+    font-size: 1.6em;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.nav-links a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color); 
+    text-shadow: 0 0 10px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   2. Hero Section / Main Content
+   ==================================== */
+.hero-section {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    text-shadow: 0 0 20px var(--primary-color), 0 0 5px var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+
+/* ====================================
+   3. Footer Styling (Social Links)
+   ==================================== */
+footer {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 25px 50px;
+    
+    /* फ़ूटर पर ग्लास इफ़ेक्ट */
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-top: 1px solid var(--glass-border);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    margin-top: 80px;
+    font-size: 1em;
+}
+
+.contact-info a {
+    color: var(--primary-color); 
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+    text-shadow: 0 0 15px var(--secondary-color);
+}
+
+/* सोशल आइकॉन्स पर Glass Effect और Color Theme */
+.social-links {
+    display: flex;
+    gap: 18px; 
+}
+
+.social-icon {
+    /* styles.css से .glass-effect प्रॉपर्टीज़ का उपयोग */
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 12px 15px;
+    font-size: 1.8em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color-light); 
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Colour Theme Overrides */
+.social-icon.insta { color: #ff0099; border-color: #ff0099; }
+.social-icon.insta:hover { box-shadow: 0 0 25px #ff0099, 0 0 10px var(--secondary-color); }
+
+.social-icon.whatsapp { color: #25D366; border-color: #25D366; }
+.social-icon.whatsapp:hover { box-shadow: 0 0 25px #25D366, 0 0 10px var(--secondary-color); }
+
+.social-icon.youtube { color: #FF0000; border-color: #FF0000; }
+.social-icon.youtube:hover { box-shadow: 0 0 25px #FF0000, 0 0 10px var(--secondary-color); }
+
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 50px auto; 
+    padding: 40px;
+    text-align: left; 
+    
+    /* फॉर्म पर भी ग्लास इफ़ेक्ट */
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.contact-form label {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: var(--primary-color); 
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+/* Call Now Button Styling (Contact Page) */
+.quick-contact {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.call-button {
+    font-size: 1.2em;
+    padding: 15px 35px;
+    gap: 12px; 
+}
+
+
+/* ====================================
+   4. Responsive Design (Mobile View)
+   ==================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .nav-links {
+        margin-top: 10px;
+    }
+    .nav-links a {
+        margin: 0 10px;
+    }
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    .contact-info, .social-links {
+        order: 2; 
+    }
+    .contact-info {
+        margin-top: 10px;
+    }
+    .contact-form {
+        margin: 30px auto;
+        padding: 20px;
+    }
+}
+
+/* ====================================
+   NEW: Index Page Styling (home.css में जोड़ें)
+   ==================================== */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* पूरी स्क्रीन की ऊँचाई लें */
+    text-align: center;
+    padding: 20px;
+}
+
+/* App Icon / Sharad Rathore Box Styling */
+.app-icon {
+    /* styles.css से .glass-effect प्रॉपर्टीज़ का उपयोग */
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: 25px; /* गोल कोने */
+    width: 200px; /* साइज़ */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    box-shadow: 0 0 30px var(--primary-color); /* ग्लोइंग शैडो */
+    
+    /* अंदर के टेक्स्ट की स्टाइलिंग */
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.icon-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-color-light);
+}
+
+/* index.html पर मुख्य हेडिंग (SHARAD RATHORE) */
+.main-container h1 {
+    font-size: 3.5em; /* हेडिंग साइज़ बढ़ाएँ */
+    text-shadow: 0 0 30px var(--primary-color), 0 0 10px var(--secondary-color);
+    margin-bottom: 50px; /* बटन से दूरी */
+    transition: transform 0.3s ease;
+}
+
+.main-container h1:hover {
+    transform: scale(1.05); /* होवर पर हल्का इफ़ेक्ट */
+}
+
+/* index.html पर बटनों का कंटेनर (उन्हें भी बीच में दिखाने के लिए) */
+.main-container button {
+    margin: 10px 0; /* बटनों के बीच की दूरी */
+    width: 250px; /* बटन की चौड़ाई सेट करें */
+    font-size: 1.2em;
+}
+
+/* ... बाकी home.css का कोड (Navbar, Footer, Contact Form, आदि) ... */

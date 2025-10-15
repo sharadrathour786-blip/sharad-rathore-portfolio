@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharad Rathore - Contact</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="home.css">   
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Sharad Rathore</a>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="hero-section contact-section">
+        <h1>मुझसे संपर्क करें</h1>
+        <p>अगर आपके पास कोई प्रोजेक्ट आईडिया या सवाल है, तो नीचे दिए गए फ़ॉर्म का उपयोग करें या सीधे कॉल करें।</p>
+
+        <div class="quick-contact">
+            <p>या सीधे कॉल करें:</p>
+            <a href="tel:+918218312429" class="btn primary-btn call-button">
+                <i class="fas fa-phone"></i> +91 82183 12429
+            </a>
+        </div>
+
+        <form class="contact-form" id="contactForm" 
+              action="https://formsubmit.co/Sharadrathore366@gmail.com" 
+              method="POST"
+              onsubmit="alert('आपका संदेश सफलतापूर्वक भेज दिया गया है। शरद राठौर जल्द ही आपसे संपर्क करेंगे।');">
+
+            <input type="hidden" name="_subject" value="New Portfolio Message from Sharad's Website!">
+
+            <label for="name">आपका नाम:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">आपका ईमेल:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">आपका संदेश:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn primary-btn">संदेश भेजें</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Sharad Rathore. All rights reserved.</p>
+
+        <div class="contact-info">
+            <a href="tel:+918218312429" class="contact-detail">
+                <i class="fas fa-phone"></i> +91 82183 12429
+            </a>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/racer_sharad_rathore7?igsh=d3M0bXpnMWxmYmE4" target="_blank" class="social-icon insta" title="Instagram Profile">
+                <i class="fab fa-instagram"></i>
+            </a>
+            
+            <a href="https://wa.me/918218312429" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+            <a href="https://www.youtube.com/@codingwithsharadrathore" target="_blank" class="social-icon youtube" title="YouTube Channel">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

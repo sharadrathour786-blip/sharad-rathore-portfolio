@@ -1,0 +1,28 @@
+/* पोर्टफोलियो सेक्शन के लिए CSS */
+.portfolio-grid {
+    padding: 80px 50px;
+    display: grid; /* Grid लेआउट चालू करें */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* रिस्पॉन्सिव ग्रिड */
+    gap: 30px; /* कार्ड्स के बीच की जगह */
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* होवर पर कार्ड थोड़ा ऊपर उठ जाए */
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.project-card h3 {
+    color: #00ffff;
+    margin-top: 0;
+}
